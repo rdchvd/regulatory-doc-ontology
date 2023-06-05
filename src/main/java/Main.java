@@ -66,10 +66,11 @@ public class Main {
             try {
                 String docsSubstring = text.substring(startIndex, endIndex);
                 String name = extractTitle(docsSubstring);
-                String reference = extractReference(docsSubstring);
-                String label = name + ',' + reference;
-                String docType = extractDocType(reference);
-                documentInstance = new RegulatoryDocument(model, "", docType, label, name);
+                String id = extractReference(docsSubstring);
+                String label = id + " " + name;
+                String docType = extractDocType(id);
+
+                documentInstance = new RegulatoryDocument(model, id, docType, label, name);
             } catch (Exception e) {
                 System.out.println("Could not parse one of the title page elements: ");
                 System.out.println(e.toString());
@@ -176,6 +177,29 @@ public class Main {
         return null;
     }
 
+    public static String parseAnnotation(String text) {
+        String pattern = "Ан.*\\n(.*)\\n";
+
+        // Create a Pattern object
+        Pattern regex = Pattern.compile(pattern);
+
+        // Create a Matcher object
+        Matcher matcher = regex.matcher(text);
+
+        // Check if a match is found
+        if (matcher.find()) {
+            // Extract the desired text from the first capturing group
+
+            return matcher.group(1);
+
+        } else {
+            System.out.println("No match found.");
+            return "";
+        }
+    }
+
+
+
     public static void main(String[] args) {
         OntModel model = OntologyHelper.createOntology();
 
@@ -198,26 +222,28 @@ public class Main {
         assert people != null;
 
         List<Individual> authorities = new ArrayList<>();
-        List<Individual> deputees = new ArrayList<>();
+        List<Individual> deputies = new ArrayList<>();
 
         for (String author : authors) {
             authorities.add(OntologyHelper.createIndividual(model, OntologyHelper.getClassByName(model, "Authority"), author));
         }
         for (String person : people) {
-            deputees.add(OntologyHelper.createIndividual(model, OntologyHelper.getClassByName(model, "Deputee"), person));
+            deputies.add(OntologyHelper.createIndividual(model, OntologyHelper.getClassByName(model, "Deputee"), person));
         }
 
         for (Individual authority : authorities) {
-            for (Individual deputee : deputees) {
-                OntologyHelper.addObjectPropertyValue(model, authority, "hasMember", deputee);
+            for (Individual deputy : deputies) {
+                OntologyHelper.addObjectPropertyValue(model, authority, "hasMember", deputy);
             }
         }
+        mainDocument.setAnnotation(parseAnnotation(docText));
+        mainDocument.setIndustry("Харчові продукти");
+        mainDocument.setAuthors(authorities);
 
+        mainDocument.getDataFromOnline();
+        mainDocument.addToOntology();
 
-        for (RegulatoryDocument doc: referenceDocumentInstances){
-            OntologyHelper.removeIndividual(model, doc.individualInstance);
-        }
-
+        OntologyHelper.save(model);
 
 
     }

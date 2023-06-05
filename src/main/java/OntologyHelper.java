@@ -1,9 +1,11 @@
 import org.apache.jena.ontology.*;
-import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.util.iterator.ExtendedIterator;
 import org.apache.jena.util.iterator.WrappedIterator;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,7 +77,7 @@ public class OntologyHelper {
     }
 
     public static Individual createIndividual(OntModel model, OntClass classInstance, String individualName) {
-        return model.createIndividual(ontologyURI + individualName, classInstance);
+        return model.createIndividual(ontologyURI + individualName.replace(" ", "_"), classInstance);
     }
 
     public static List<Resource> getDataPropertiesOfIndividual(OntModel ontModel, Individual individual) {
@@ -118,31 +120,38 @@ public class OntologyHelper {
         }
     }
 
+    public static void getDataPropertyUsage(OntModel model, DatatypeProperty property) {
+        if (property != null) {
+            // Iterate over all subjects that have the given object property
+            ResIterator subjects = model.listSubjectsWithProperty(property);
+            ExtendedIterator<Resource> extendedIterator = WrappedIterator.create(subjects);
+
+            while (extendedIterator.hasNext()) {
+                Resource subject = extendedIterator.next();
+                System.out.println("Subject: " + subject.getURI());
+
+                // Get the values of the object property for the subject
+                StmtIterator statements = subject.listProperties(property);
+                while (statements.hasNext()) {
+                    Statement statement = statements.next();
+                    RDFNode value = statement.getObject();
+                    System.out.println("Value: " + value);
+                }
+            }
+        } else {
+            System.out.println("Data property not found.");
+        }
+    }
+
     public static void addObjectPropertyValue(OntModel model, Individual object, String propertyName, Individual subject){
         ObjectProperty property = model.getObjectProperty(Configuration.ONTOLOGY_URI + propertyName);
         model.add(object, property, subject);
 
     }
-
-
-    public static void setDataPropertyValue(
-            OntModel model, Individual individual, String dataPropertyName, String value
-    )
-    {
-
-        // Get the data property by its name
-        DatatypeProperty dataProperty = model.getDatatypeProperty(ontologyURI + dataPropertyName);
-
-        // Create a literal value for the data property value
-        Literal dataPropertyValue = model.createTypedLiteral(value);
-
-        // Add the data property value to the individual
-        individual.addProperty(dataProperty, dataPropertyValue);
-
-        getDataPropertiesOfIndividual(model, individual);
-
-        // Save the modified OntModel or perform any other operations as needed
-//         model.write(System.out, "RDF/XML"); // Example of saving the OntModel to the console
+    public static void addDataPropertyValue(OntModel model, Individual object, String propertyName, Literal value){
+        System.out.println("value while writing: " + value);
+        DatatypeProperty property = model.getDatatypeProperty(Configuration.ONTOLOGY_URI + propertyName);
+        model.add(object, property, value);
 
     }
 
@@ -163,19 +172,30 @@ public class OntologyHelper {
 
     }
 
-    public static List<QuerySolution> selectSPARQLQuery(OntModel model, String sparqlQuery) {
-        List<QuerySolution> rows = new ArrayList<>();
-        Query query = QueryFactory.create(sparqlQuery);
-        try (QueryExecution executionInstance = QueryExecutionFactory.create(query, model)) {
-            ResultSet resultSet = executionInstance.execSelect();
-            while (resultSet.hasNext()) {
-                rows.add(resultSet.next());
+    public static void save(OntModel model){
+        try {
+            // Create the file object
+            File file = new File(Configuration.OUTPUT_FILE_PATH);
+
+            // Create the directory if it doesn't exist
+            File directory = file.getParentFile();
+            if (!directory.exists()) {
+                directory.mkdirs();
             }
 
+            // Create the output stream
+            OutputStream outputStream = new FileOutputStream(file);
+
+            // Write the ontology to the output stream
+            model.write(outputStream, "RDF/XML-ABBREV");
+
+            // Close the output stream
+            outputStream.close();
+
+            System.out.println("Ontology saved successfully.");
         } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Error saving the ontology: " + e.getMessage());
         }
-        return rows;
     }
 
 }

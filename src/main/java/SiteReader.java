@@ -68,6 +68,18 @@ public class SiteReader {
         return docLinks.isEmpty() ? null : docLinks.get(0);
     }
 
+    public String findInTableByTitle(String title){
+        String xpathExpression = String.format("//tr[@class='tr_light' and td[contains(text(), '%s')]]", title);
+        WebElement rowElement = driver.findElement(By.xpath(xpathExpression));
+
+        // Find the second table cell (td) element within the row
+        WebElement valueElement = rowElement.findElements(By.tagName("td")).get(1);
+
+        // Get the text of the second table cell
+        return valueElement.getText();
+
+    }
+
     public void read(String site) {
         driver.get(site);
 
