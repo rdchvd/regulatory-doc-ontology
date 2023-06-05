@@ -1,3 +1,5 @@
+import org.apache.jena.ontology.Individual;
+import org.apache.jena.ontology.ObjectProperty;
 import org.apache.jena.ontology.OntModel;
 
 import java.util.ArrayList;
@@ -11,7 +13,7 @@ public class Main {
     private static final String docFile = Configuration.DOC_FILE_PATH;
 
 
-    public static String getRegulatoryDocumentTextFromDocx(){
+    public static String getRegulatoryDocumentTextFromDocx() {
         DocxReader docxReader = new DocxReader();
         return docxReader.read(docFile);
     }
@@ -156,7 +158,7 @@ public class Main {
 
         List<String> people = new ArrayList<>();
         if (endIndex != -1 && startIndex < endIndex) {
-            for (String personStr: text.substring(startIndex, endIndex).split("; ")) {
+            for (String personStr : text.substring(startIndex, endIndex).split("; ")) {
                 people.add(personStr.split(", ")[0]);
             }
             return people;
@@ -189,11 +191,28 @@ public class Main {
 
         List<String> authors = getAuthorsFromForeword(model, docText);
         List<String> people = getPeopleFromForeword(model, docText);
-        System.out.println(authors);
-        System.out.println(people);
+        assert authors != null;
+        assert people != null;
+
+        List<Individual> authorities = new ArrayList<>();
+        List<Individual> deputees = new ArrayList<>();
+
+        for (String author : authors) {
+            authorities.add(OntologyHelper.createIndividual(model, OntologyHelper.getClassByName(model, "Authority"), author));
+        }
+        for (String person : people) {
+            deputees.add(OntologyHelper.createIndividual(model, OntologyHelper.getClassByName(model, "Deputee"), person));
+        }
+
+        Individual testAuthority = authorities.get(0);
+        Individual testDeputee = deputees.get(0);
+
+        ObjectProperty hasMemberProperty = model.getObjectProperty(Configuration.ONTOLOGY_URI + "hasMember");
+
+        model.add(testAuthority, hasMemberProperty, testDeputee);
+
 //        SiteReader siteReader = new SiteReader();
 //        siteReader.read(Configuration.DOC_ONLINE_DB_SITE);
-
 
 
     }
