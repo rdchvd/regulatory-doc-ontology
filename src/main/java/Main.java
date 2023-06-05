@@ -1,4 +1,7 @@
+import org.apache.jena.base.Sys;
 import org.apache.jena.ontology.OntModel;
+import org.apache.jena.sparql.exec.RowSet;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -49,6 +52,35 @@ public class Main {
         return documentInstances;
     }
 
+    public static RegulatoryDocument createRegulatoryDocumentsFromTitlePage(OntModel model, String text) {
+        String startMarker = "НАЦІОНАЛЬНИЙ СТАНДАРТ УКРАЇНИ\n";
+        String endMarker = "\nПЕРЕДМОВА";
+
+        RegulatoryDocument documentInstance = null;
+
+        // Find the start and end positions of the substring
+        int startIndex = text.indexOf(startMarker) + startMarker.length();
+        int endIndex = text.indexOf(endMarker);
+
+        if (endIndex != -1 && startIndex < endIndex) {
+            try {
+                String docsSubstring = text.substring(startIndex, endIndex);
+                String name = extractTitle(docsSubstring);
+                String reference = extractReference(docsSubstring);
+                String label = name + ',' + reference;
+                String docType = extractDocType(reference);
+                documentInstance = new RegulatoryDocument(model, "", docType, label, name);
+            } catch (Exception e) {
+                System.out.println("Could not parse one of the title page elements: ");
+                System.out.println(e.toString());
+            }
+
+        } else {
+            System.out.println("Substring markers not found or in incorrect order.");
+        }
+
+        return documentInstance;
+    }
 
     private static String extractIdentifier(String match) {
         String[] parts = match.split("\\s", 3);
@@ -61,6 +93,39 @@ public class Main {
     }
 
     private static String extractType(String match) {
+        String[] parts = match.split("\\s", 2);
+        return parts[0];
+    }
+
+    private static String extractTitle(String match) {
+        String endMarker = "\nЗагальні технічні умови";
+
+        RegulatoryDocument documentInstance = null;
+
+        // Find the start and end positions of the substring
+        int endIndex = match.indexOf(endMarker);
+
+        return match.substring(0, endIndex);
+    }
+
+    private static String extractReference(String match) throws Exception {
+        String startMarker = "Загальні технічні умови\n";
+        String endMarker = "\nВидання офіційне";
+
+        RegulatoryDocument documentInstance = null;
+
+        // Find the start and end positions of the substring
+        int startIndex = match.indexOf(startMarker) + startMarker.length();
+        int endIndex = match.indexOf(endMarker);
+
+        if (endIndex == -1 || startIndex >= endIndex) {
+            throw new Exception("Could not parse the title");
+        }
+
+        return match.substring(startIndex, endIndex);
+    }
+
+    private static String extractDocType(String match) {
         String[] parts = match.split("\\s", 2);
         return parts[0];
     }
@@ -81,8 +146,11 @@ public class Main {
             System.out.println(doc.classInOntology);
             System.out.println();
         }
-        SiteReader siteReader = new SiteReader();
-        siteReader.read(Configuration.DOC_ONLINE_DB_SITE);
+
+        RegulatoryDocument mainDocument = createRegulatoryDocumentsFromTitlePage(model, docText);
+        mainDocument.print();
+//        SiteReader siteReader = new SiteReader();
+//        siteReader.read(Configuration.DOC_ONLINE_DB_SITE);
 
 
 
