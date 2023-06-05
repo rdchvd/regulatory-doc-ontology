@@ -1,8 +1,7 @@
-import org.apache.jena.base.Sys;
 import org.apache.jena.ontology.OntModel;
-import org.apache.jena.sparql.exec.RowSet;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -130,6 +129,44 @@ public class Main {
         return parts[0];
     }
 
+    public static List<String> getAuthorsFromForeword(OntModel model, String text) {
+        String startMarker = "РОЗРОБЛЕНО: ";
+        String endMarker = "\nРОЗРОБНИКИ: ";
+
+        // Find the start and end positions of the substring
+        int startIndex = text.indexOf(startMarker) + startMarker.length();
+        int endIndex = text.indexOf(endMarker);
+
+        if (endIndex != -1 && startIndex < endIndex) {
+            return Arrays.asList(text.substring(startIndex, endIndex).split(", "));
+        }
+
+        System.out.println("Substring markers not found or in incorrect order.");
+
+        return null;
+    }
+
+    public static List<String> getPeopleFromForeword(OntModel model, String text) {
+        String startMarker = "РОЗРОБНИКИ: ";
+        String endMarker = "\nПРИЙНЯТО ТА НАДАНО ЧИННОСТІ: ";
+
+        // Find the start and end positions of the substring
+        int startIndex = text.indexOf(startMarker) + startMarker.length();
+        int endIndex = text.indexOf(endMarker);
+
+        List<String> people = new ArrayList<>();
+        if (endIndex != -1 && startIndex < endIndex) {
+            for (String personStr: text.substring(startIndex, endIndex).split("; ")) {
+                people.add(personStr.split(", ")[0]);
+            }
+            return people;
+        } else {
+            System.out.println("Substring markers not found or in incorrect order.");
+        }
+
+        return null;
+    }
+
     public static void main(String[] args) {
 //        OntologyHelper ontology = new OntologyHelper();
         // create ontology
@@ -149,6 +186,11 @@ public class Main {
 
         RegulatoryDocument mainDocument = createRegulatoryDocumentsFromTitlePage(model, docText);
         mainDocument.print();
+
+        List<String> authors = getAuthorsFromForeword(model, docText);
+        List<String> people = getPeopleFromForeword(model, docText);
+        System.out.println(authors);
+        System.out.println(people);
 //        SiteReader siteReader = new SiteReader();
 //        siteReader.read(Configuration.DOC_ONLINE_DB_SITE);
 
