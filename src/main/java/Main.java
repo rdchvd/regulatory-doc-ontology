@@ -206,12 +206,14 @@ public class Main {
         OntologyHelper.loadOntologyFromFile(model, ontologyFile);
 
         String docText = getRegulatoryDocumentTextFromDocx();
+        System.out.println(docText);
 
         List<RegulatoryDocument> referenceDocumentInstances = createRegulatoryDocumentsFromReferences(model, docText);
 
 
         for (RegulatoryDocument doc: referenceDocumentInstances) {
-            doc.individualInstance = OntologyHelper.createIndividual(model, doc.classInOntology, doc.getId());
+            doc.setIndustry("Харчові продукти");
+            doc.addToOntology();
         }
 
         RegulatoryDocument mainDocument = createRegulatoryDocumentsFromTitlePage(model, docText);
