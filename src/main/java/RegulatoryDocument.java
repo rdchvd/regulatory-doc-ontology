@@ -1,8 +1,11 @@
+import org.apache.jena.ontology.Individual;
 import org.apache.jena.ontology.OntClass;
 import org.apache.jena.ontology.OntModel;
+import org.apache.jena.rdf.model.ResourceFactory;
 
 import java.time.LocalDate;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class RegulatoryDocument {
@@ -18,8 +21,11 @@ public class RegulatoryDocument {
     private String label;
     private String name;
     private OntModel model;
+    private String link;
 
     public OntClass classInOntology;
+    public Individual individualInstance;
+    private List<Individual> authors;
 
 
     public RegulatoryDocument(OntModel model, String id, String docType, String label, String name) {
@@ -91,6 +97,10 @@ public class RegulatoryDocument {
         this.renewedAt = renewedAt;
     }
 
+    public void setLink(String link) {
+        this.link = link;
+    }
+
     public boolean isAvailableOnline() {
         return isAvailableOnline;
     }
@@ -115,8 +125,24 @@ public class RegulatoryDocument {
         return label;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getLink() {
+        return link;
+    }
+
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    public void setAuthors(List<Individual> authors) {
+        this.authors = authors;
+    }
+
+    public List<Individual> getAuthors() {
+        return this.authors;
     }
 
     public void print() {
@@ -133,5 +159,16 @@ public class RegulatoryDocument {
 
         String className = String.valueOf(documentTypes.get(this.docType));
         this.classInOntology = OntologyHelper.getClassByName(this.model, className);
+    }
+
+    public void addToOntology() {
+        this.individualInstance = OntologyHelper.createIndividual(
+                model, this.classInOntology, this.getId()
+        );
+
+        if (this.label != null)
+            this.individualInstance.addLabel(ResourceFactory.createStringLiteral(this.label));
+
+
     }
 }

@@ -1,9 +1,8 @@
-import org.apache.jena.ontology.Individual;
-import org.apache.jena.ontology.OntClass;
-import org.apache.jena.ontology.OntModel;
-import org.apache.jena.ontology.OntResource;
+import org.apache.jena.ontology.*;
 import org.apache.jena.query.*;
-import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.util.iterator.ExtendedIterator;
+import org.apache.jena.util.iterator.WrappedIterator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,13 +78,80 @@ public class OntologyHelper {
         return model.createIndividual(ontologyURI + individualName, classInstance);
     }
 
+    public static List<Resource> getDataPropertiesOfIndividual(OntModel ontModel, Individual individual) {
+        List<Resource> dataProperties = new ArrayList<>();
+
+        // Get all statements where the individual is the subject
+        List<Statement> statements = ontModel.listStatements(individual, null, (String) null).toList();
+
+        // Iterate over the statements and extract the data properties
+        for (Statement statement : statements) {
+            if (statement.getPredicate().isProperty()) {
+                dataProperties.add(statement.getPredicate().asResource());
+                System.out.println("prop = " + statement.getPredicate() +  "; " + statement.getString());
+            }
+        }
+
+        return dataProperties;
+    }
+
+    public static void getObjectPropertyUsage(OntModel model, ObjectProperty property) {
+        if (property != null) {
+            // Iterate over all subjects that have the given object property
+            ResIterator subjects = model.listSubjectsWithProperty(property);
+            ExtendedIterator<Resource> extendedIterator = WrappedIterator.create(subjects);
+
+            while (extendedIterator.hasNext()) {
+                Resource subject = extendedIterator.next();
+                System.out.println("Subject: " + subject.getURI());
+
+                // Get the values of the object property for the subject
+                StmtIterator statements = subject.listProperties(property);
+                while (statements.hasNext()) {
+                    Statement statement = statements.next();
+                    RDFNode value = statement.getObject();
+                    System.out.println("Value: " + value);
+                }
+            }
+        } else {
+            System.out.println("Object property not found.");
+        }
+    }
+
+    public static void addObjectPropertyValue(OntModel model, Individual object, String propertyName, Individual subject){
+        ObjectProperty property = model.getObjectProperty(Configuration.ONTOLOGY_URI + propertyName);
+        model.add(object, property, subject);
+
+    }
+
+
+    public static void setDataPropertyValue(
+            OntModel model, Individual individual, String dataPropertyName, String value
+    )
+    {
+
+        // Get the data property by its name
+        DatatypeProperty dataProperty = model.getDatatypeProperty(ontologyURI + dataPropertyName);
+
+        // Create a literal value for the data property value
+        Literal dataPropertyValue = model.createTypedLiteral(value);
+
+        // Add the data property value to the individual
+        individual.addProperty(dataProperty, dataPropertyValue);
+
+        getDataPropertiesOfIndividual(model, individual);
+
+        // Save the modified OntModel or perform any other operations as needed
+//         model.write(System.out, "RDF/XML"); // Example of saving the OntModel to the console
+
+    }
+
+
     public static void removeIndividual(OntModel model, Individual individual) {
         model.removeAll(individual, null, null);
     }
 
-    public static void createAndRemoveIndividual(OntModel model, String className, String individualName) {
-
-        OntClass classInstance = getClassByName(model, className);
+    public static void createAndRemoveIndividual(OntModel model, OntClass classInstance, String individualName) {
 
         Individual individual = createIndividual(model, classInstance, individualName);
         System.out.println("Список індивідуалів у класі Law після створення " + individualName + ":");

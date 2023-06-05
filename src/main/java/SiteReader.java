@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class SiteReader {
     private static final String driverPath = Configuration.CHROME_DRIVER_PATH;
@@ -23,7 +24,12 @@ public class SiteReader {
     }
 
     public void makeSearch(String searchTerm){
-        WebElement searchInput = driver.findElement(By.id("entertop"));
+        WebElement searchInput;
+        try {
+            searchInput = driver.findElement(By.id("entertop"));
+        } catch (NoSuchElementException e) {
+            searchInput = driver.findElement(By.id("enter"));
+        }
 
         // Enter your search term
         searchInput.sendKeys(searchTerm);
@@ -50,6 +56,7 @@ public class SiteReader {
     }
 
     public String findDocLink(String docName, String identifier){
+        read(Configuration.DOC_ONLINE_DB_SITE);
         makeSearch(docName);
 
         List<String> docLinks = searchThroughDocs(docName);

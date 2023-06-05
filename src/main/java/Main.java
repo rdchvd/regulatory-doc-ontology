@@ -1,5 +1,4 @@
 import org.apache.jena.ontology.Individual;
-import org.apache.jena.ontology.ObjectProperty;
 import org.apache.jena.ontology.OntModel;
 
 import java.util.ArrayList;
@@ -98,6 +97,14 @@ public class Main {
         return parts[0];
     }
 
+    private static void addDataToDocumentFromSite(SiteReader siteReader, RegulatoryDocument doc){
+        String docLink = siteReader.findDocLink(doc.getName(), doc.getId());
+        if (docLink!= null){
+            doc.setAvailableOnline(true);
+            doc.setLink(docLink);
+        }
+    }
+
     private static String extractTitle(String match) {
         String endMarker = "\nЗагальні технічні умови";
 
@@ -131,7 +138,7 @@ public class Main {
         return parts[0];
     }
 
-    public static List<String> getAuthorsFromForeword(OntModel model, String text) {
+    public static List<String> getAuthorsFromForeword(String text) {
         String startMarker = "РОЗРОБЛЕНО: ";
         String endMarker = "\nРОЗРОБНИКИ: ";
 
@@ -148,7 +155,7 @@ public class Main {
         return null;
     }
 
-    public static List<String> getPeopleFromForeword(OntModel model, String text) {
+    public static List<String> getPeopleFromForeword(String text) {
         String startMarker = "РОЗРОБНИКИ: ";
         String endMarker = "\nПРИЙНЯТО ТА НАДАНО ЧИННОСТІ: ";
 
@@ -170,27 +177,23 @@ public class Main {
     }
 
     public static void main(String[] args) {
-//        OntologyHelper ontology = new OntologyHelper();
-        // create ontology
         OntModel model = OntologyHelper.createOntology();
 
-        // read existing to it
         OntologyHelper.loadOntologyFromFile(model, ontologyFile);
 
         String docText = getRegulatoryDocumentTextFromDocx();
 
-        List<RegulatoryDocument> documentInstances = createRegulatoryDocumentsFromReferences(model, docText);
-        for (RegulatoryDocument doc: documentInstances) {
-            doc.print();
-            System.out.println(doc.classInOntology);
-            System.out.println();
+        List<RegulatoryDocument> referenceDocumentInstances = createRegulatoryDocumentsFromReferences(model, docText);
+
+
+        for (RegulatoryDocument doc: referenceDocumentInstances) {
+            doc.individualInstance = OntologyHelper.createIndividual(model, doc.classInOntology, doc.getId());
         }
 
         RegulatoryDocument mainDocument = createRegulatoryDocumentsFromTitlePage(model, docText);
-        mainDocument.print();
 
-        List<String> authors = getAuthorsFromForeword(model, docText);
-        List<String> people = getPeopleFromForeword(model, docText);
+        List<String> authors = getAuthorsFromForeword(docText);
+        List<String> people = getPeopleFromForeword(docText);
         assert authors != null;
         assert people != null;
 
@@ -204,15 +207,17 @@ public class Main {
             deputees.add(OntologyHelper.createIndividual(model, OntologyHelper.getClassByName(model, "Deputee"), person));
         }
 
-        Individual testAuthority = authorities.get(0);
-        Individual testDeputee = deputees.get(0);
+        for (Individual authority : authorities) {
+            for (Individual deputee : deputees) {
+                OntologyHelper.addObjectPropertyValue(model, authority, "hasMember", deputee);
+            }
+        }
 
-        ObjectProperty hasMemberProperty = model.getObjectProperty(Configuration.ONTOLOGY_URI + "hasMember");
 
-        model.add(testAuthority, hasMemberProperty, testDeputee);
+        for (RegulatoryDocument doc: referenceDocumentInstances){
+            OntologyHelper.removeIndividual(model, doc.individualInstance);
+        }
 
-//        SiteReader siteReader = new SiteReader();
-//        siteReader.read(Configuration.DOC_ONLINE_DB_SITE);
 
 
     }
