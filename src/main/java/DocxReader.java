@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class DocxReader {
-    public String readDocxFile(String filePath) {
+    public String read(String filePath) {
         StringBuilder textBuilder = new StringBuilder();
 
         try (FileInputStream fis = new FileInputStream(filePath);

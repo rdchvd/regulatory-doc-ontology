@@ -11,7 +11,7 @@ public class Main {
 
     public static String getRegulatoryDocumentTextFromDocx(){
         DocxReader docxReader = new DocxReader();
-        return docxReader.readDocxFile(docFile);
+        return docxReader.read(docFile);
     }
 
     public static List<RegulatoryDocument> createRegulatoryDocumentsFromReferences(OntModel model, String text) {
@@ -38,7 +38,7 @@ public class Main {
             while (matcher.find()) {
                 String match = matcher.group();
                 RegulatoryDocument document = new RegulatoryDocument(
-                        model, extractIdentifier(match), extractType(match), match
+                        model, extractIdentifier(match), extractType(match), match, extractName(match)
                 );
                 documentInstances.add(document);
 
@@ -53,6 +53,11 @@ public class Main {
     private static String extractIdentifier(String match) {
         String[] parts = match.split("\\s", 3);
         return parts[0] + " " + parts[1];
+    }
+
+    private static String extractName(String match) {
+        String[] parts = match.split("\\s", 3);
+        return parts[2];
     }
 
     private static String extractType(String match) {

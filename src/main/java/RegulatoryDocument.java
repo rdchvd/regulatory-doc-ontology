@@ -16,16 +16,18 @@ public class RegulatoryDocument {
     private boolean isAvailableOnline;
     private boolean isInternational;
     private String label;
+    private String name;
     private OntModel model;
 
     public OntClass classInOntology;
 
 
-    public RegulatoryDocument(OntModel model, String id, String docType, String label) {
+    public RegulatoryDocument(OntModel model, String id, String docType, String label, String name) {
         this.model = model;
         this.id = id;
         this.docType = docType;
         this.label = label;
+        this.name = name;
         setClassByType();
     }
 
