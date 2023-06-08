@@ -1,0 +1,2386 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/"
+     xml:base="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/"
+     xmlns:j.0="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Патогенні мікроорганізми, а також бактерії роду Salmonella, в 25 г "
+     xmlns:j.1="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Бактерії групи кишкових паличок (коліформи) в 0,01 г "
+     xmlns:j.2="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Патогенні_мікроорганізми,_а_також_бактерії_роду_Salmonella,"
+     xmlns:j.3="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Масова частка вологи, відсоток, не більше "
+     xmlns:j.4="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Масова_частка_жиру_в_сухій_речовині,_відсоток,"
+     xmlns:j.5="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Бактерії_групи_кишкових_паличок_(коліформи)_в_0,01"
+     xmlns:j.6="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Миш’"
+     xmlns:j.7="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Staphylococcus aureus, КУО, в 1 г сиру, не більше "
+     xmlns:j.8="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Масова_частка_кухонної_солі,_відсоток,"
+     xmlns:j.9="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Staphylococcus_aureus,_КУО,_в_1_г_сиру,"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:j.10="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Масова частка жиру в сухій речовині, відсоток, не менше "
+     xmlns:j.11="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Масова частка кухонної солі, відсоток, не більше "
+     xmlns:j.12="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Listeria monocytogenes, в 25 "
+     xmlns:j.13="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Listeria_monocytogenes,"
+     xmlns:j.14="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Масова_частка_вологи,_відсоток,"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:lab-1-rodicheva="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#IsIndustryOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#IsIndustryOf">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasIndustry"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#canChange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#canChange">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isAuthorOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasIndustry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasIndustry"/>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isMemberOf"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isAuthorOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isCoworker -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isCoworker">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isMemberOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isMemberOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#modifies -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#modifies"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#age -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#age">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label xml:lang="uk">Вік</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:label xml:lang="uk">Тип поправки</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#created_at -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#created_at">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="uk">Дата створення</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#degree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#degree">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>Bachelor</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>Master</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:label>Освіта</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#edition -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#edition">
+        <rdfs:label xml:lang="uk">Номер редакції</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#id -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#id">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">Ідентифікатор</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#implemented_at -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#implemented_at">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="uk">Надано чинності</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isAvailableOnline -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isAvailableOnline">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="uk">Доступне онлайн</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:label xml:lang="uk">Міжнародне</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isReadOpen -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isReadOpen">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>Чи мають люди відкритий доступ до читання чього нормативного документа?</rdfs:comment>
+        <rdfs:label xml:lang="uk">Доступне</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#link -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#link">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="uk">Посилання</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#renewed_at -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#renewed_at">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="uk">Дата поновлення</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Administrative_Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Administrative_Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Адміністративно-правовий Закон</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author">
+        <rdfs:comment xml:lang="en">Entity, person or authority (team) that is the author of a regulatory document</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Сутність, людина чи орган (команда), що є автором нормативного документом</rdfs:comment>
+        <rdfs:label>Автор</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Орган Влади</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Civil_Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Civil_Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Цивільно-правовий Закон</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ClosedSpecification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ClosedSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalSpecification"/>
+        <rdfs:label>Закрита Технічна Документація</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#CodeOfPractice -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#CodeOfPractice">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:comment xml:lang="en">A normative document that provides guidance on practices or procedures for the design, manufacture, installation, maintenance, or operation of equipment, structures, or products</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Нормативний документ, що містить рекомендації щодо практик чи процедур проектування, виготовлення, монтажу, технічного обслуговування або експлуатації обладнання, конструкцій чи виробів</rdfs:comment>
+        <rdfs:label>Кодекс Усталеної Практики</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitutional_Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitutional_Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Конституційно-правовий Закон</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Correction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Correction">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType"/>
+                        <owl:hasValue>correction</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType"/>
+                        <owl:hasValue>correction</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType"/>
+                <owl:hasValue>correction</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdfs:label>Депутат</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Industry -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Industry"/>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#IndustryStandard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#IndustryStandard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+        <rdfs:label>Галузевий Стандарт</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#InternationalStandard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#InternationalStandard">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Міжнародний Стандарт</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:comment xml:lang="en">A document, a legal act, a generally binding rule established by a legislative body that has the highest legal force</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Документ, нормативно-правовий акт, встановлений законодавчим органом загальнообов&apos;язкове правило, яке має найвищу юридичну силу</rdfs:comment>
+        <rdfs:label>Закон</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Lawyer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Lawyer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdfs:label>Юрист</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#OpenSpecification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#OpenSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalSpecification"/>
+        <rdfs:label>Відкрита Технічна Документація</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Organic_Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Organic_Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitutional_Law"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Reforming_Law"/>
+        <rdfs:label>Органічний Закон</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person">
+        <rdfs:label>Людина</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Reforming_Law -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Reforming_Law">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitutional_Law"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Реформуючий Закон</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Regulation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Regulation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:comment xml:lang="en">A set (system) of rules that regulates and restricts working hours, design and repair technologies, etc., for example, in mines, quarries, wells, factories.</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Сукупність (система) правил, що регулюють, обмежують режим праці, технології виконання проєктування, ремонтних робіт тощо, наприклад, на шахтах, у кар&apos;єрах, у свердловинах, на заводах.</rdfs:comment>
+        <rdfs:label>Регламент</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument">
+        <rdfs:comment xml:lang="en">A document that establishes rules, general principles or characteristics of various activities or their results.</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Документ, що встановлює правила, загальні принципи чи характеристики різних видів діяльності або їхніх результатів</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Scientist -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Scientist">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdfs:label>Науковець</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Secretary -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Secretary">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdfs:label>Секретар</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:comment xml:lang="en">A consensus-based normative document adopted by a recognized body that establishes rules, guidelines or characteristics for general and repeated use regarding an activity or its results, and is aimed at achieving an optimal degree of orderliness in a particular area</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Нормативний документ, заснований на консенсусі, прийнятий визнаним органом, що встановлює для загального і неодноразового використання правила, настанови або характеристики щодо діяльності чи її результатів, та спрямований на досягнення оптимального ступеня впорядкованості в певній сфері</rdfs:comment>
+        <rdfs:label>Стандарт</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StateClassifier -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StateClassifier">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:comment xml:lang="en">A document that systematizes the names of product and service groupings</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Документ, систематизоване зведення назв угруповань продукції та послуг</rdfs:comment>
+        <rdfs:label>Державний Класифікатор</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StateStandard -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StateStandard">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+        <rdfs:label>Державний Стандарт</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdfs:label>Студент</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Scientist"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Secretary"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+        <rdfs:label>Технічний Комітет</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalSpecification -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalSpecification">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdfs:comment xml:lang="en">A regulatory document that establishes internal technical requirements that a product, process, or service must meet and defines procedures by which it can be determined whether such requirements are met</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Нормативний документ, що встановлює внутрішні технічні вимоги, яким повинна відповідати продукція, процес або послуга, та визначає процедури, за допомогою яких може бути встановлено, чи дотримані такі вимоги</rdfs:comment>
+        <rdfs:label>Технічні Умови</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Andriy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Andriy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Lawyer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Student"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Iryna"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#John"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO_SCC"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Bachelor</lab-1-rodicheva:degree>
+        <rdfs:comment xml:lang="uk">Студент на спеціальності Кібербезпека. Має 4 роки досвіду як системний адміністратор та DevOps.</rdfs:comment>
+        <rdfs:label>Андрій Ігнатенко</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#BudgetRegulations -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#BudgetRegulations">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Regulation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Бюджетний регламент</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Cabinet_of_Ministers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Cabinet_of_Ministers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:canChange rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraibe__On_citizens_appeals"/>
+        <lab-1-rodicheva:canChange rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Ensuring_Rights_and_Freedoms_of_Citizens_and_Legal_Regime_in_Temporarily_Occupied_Territory_of_Ukraine"/>
+        <lab-1-rodicheva:canChange rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine__On_access_to_public_information"/>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Hannah"/>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Oleksiy"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraibe__On_citizens_appeals"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Amendments_to_Certain_Legislative_Acts_of_Ukraine"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Ensuring_Rights_and_Freedoms_of_Citizens_and_Legal_Regime_in_Temporarily_Occupied_Territory_of_Ukraine"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine__On_access_to_public_information"/>
+        <rdfs:label>Кабінет Міністрів</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Civil_Code -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Civil_Code">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Civil_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Цивільний Кодекс України</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ClassificationOfEconomicActivities -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ClassificationOfEconomicActivities">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StateClassifier"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Класифікація видів економічної діяльності</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitution_of_Ukraine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitution_of_Ukraine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitutional_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Конституція України</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Daryna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Daryna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Student"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Nadiya"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SE_UkrNDNC"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Bachelor</lab-1-rodicheva:degree>
+        <rdfs:label>Дарина Хмара</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Design -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Design">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#FastAPI_Specification -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#FastAPI_Specification">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#OpenSpecification"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalSpecification"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Документація FastAPI</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#GSTU32.001-94 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#GSTU32.001-94">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#IndustryStandard"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SE_UkrNDNC"/>
+        <lab-1-rodicheva:isAvailableOnline rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isAvailableOnline>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <lab-1-rodicheva:link>http://online.budstandart.com/ua/catalog/doc-page.html?id_doc=70776</lab-1-rodicheva:link>
+        <rdfs:label>ГСТУ 32.001-94 Викиди забруднюючих речовин з відпрацьованими газами тепловозних дизелів. Норми і методи визначення</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#GSTU34.013-96 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#GSTU34.013-96">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#IndustryStandard"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SE_UkrNDNC"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>ГСТУ 34.013-96 Води виробничі теплових електростанцій. Метод визначення вмісту кремнієвої кислоти</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Hannah -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Hannah">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Lawyer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Oleksiy"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Cabinet_of_Ministers"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Master</lab-1-rodicheva:degree>
+        <rdfs:comment xml:lang="en">Deputy from the SN. She has a complete higher education. She has over 7 years of experience as a lawyer. She deals mostly with environmental issues.</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Депутат від партії СН. Має повну вищу освіту. Досвід роботи юристом більше 7 років. Займається найбільше питаннями екології.</rdfs:comment>
+        <rdfs:label>Ганна Павлова</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO_SCC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO_SCC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Scientist"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Secretary"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Andriy"/>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Iryna"/>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#John"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO/TC_207"/>
+        <rdfs:label>ISO Рада зі стандартів Канади</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Iryna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Iryna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Secretary"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Andriy"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#John"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO_SCC"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">71</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Bachelor</lab-1-rodicheva:degree>
+        <rdfs:label>Ірина Новохатько</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#John -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#John">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Scientist"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Andriy"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Iryna"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO_SCC"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Master</lab-1-rodicheva:degree>
+        <rdfs:comment xml:lang="en">He has 17 scientific papers in the field of semantics and linguistics. He teaches at Cambridge University. He is a translation consultant and mythology researcher.</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Має 17 наукових робіт в області семантики та лінгвістики. Викладає в Кембріджі. Консультує в галузі перекладів та вивчає міфологію.</rdfs:comment>
+        <rdfs:label>Джон Уік</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraibe__On_citizens_appeals -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraibe__On_citizens_appeals">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Administrative_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Cabinet_of_Ministers"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Закон України Про звернення громадян</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Amendments_to_Certain_Legislative_Acts_of_Ukraine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Amendments_to_Certain_Legislative_Acts_of_Ukraine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitutional_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Reforming_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Cabinet_of_Ministers"/>
+        <lab-1-rodicheva:modifies rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraibe__On_citizens_appeals"/>
+        <lab-1-rodicheva:amendmentType>addition</lab-1-rodicheva:amendmentType>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <rdfs:label>Закон України Про внесення змін до деяких законодавчих актів України</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Capital_Markets_and_Organized_Commodity_Markets -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Capital_Markets_and_Organized_Commodity_Markets">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Civil_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#MP"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Закон України Про ринки капіталу та організовані товарні ринки</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Ensuring_Rights_and_Freedoms_of_Citizens_and_Legal_Regime_in_Temporarily_Occupied_Territory_of_Ukraine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Ensuring_Rights_and_Freedoms_of_Citizens_and_Legal_Regime_in_Temporarily_Occupied_Territory_of_Ukraine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitutional_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Organic_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Cabinet_of_Ministers"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Закон України Про забезпечення прав і свобод громадян та правовий режим на тимчасово окупованій території України</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_the_Judicial_System_and_Status_of_Judges -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_the_Judicial_System_and_Status_of_Judges">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitutional_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Organic_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#President"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Закон України Про судоустрій і статус суддів</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine__On_access_to_public_information -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine__On_access_to_public_information">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Administrative_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Cabinet_of_Ministers"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Закон України Про доступ до публічної інформації</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Lidia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Lidia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Secretary"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SE_UkrNDNC"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Master</lab-1-rodicheva:degree>
+        <rdfs:label>Лідія Блоссом</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#MP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#MP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Roman"/>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Svitlana"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Capital_Markets_and_Organized_Commodity_Markets"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#The_LawOfUkraine_On_Amendments_to_the_Commercial_Procedure_Code_of_Ukraine"/>
+        <rdfs:label>Народний Депутат</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Mac_Pro_Techical_Specifications -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Mac_Pro_Techical_Specifications">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#OpenSpecification"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalSpecification"/>
+        <lab-1-rodicheva:isAvailableOnline rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isAvailableOnline>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <lab-1-rodicheva:link>https://www.apple.com/mac-pro/specs/</lab-1-rodicheva:link>
+        <rdfs:label>Mac Pro Технічні Умови</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Nadiya -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Nadiya">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Scientist"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Daryna"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SE_UkrNDNC"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Master</lab-1-rodicheva:degree>
+        <rdfs:comment xml:lang="en">A beginner, but already has 3 scientific papers in the field of artificial intelligence. Works on recognition methods.</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Початківець, але вже має 3 наукові роботи в області штучного інтелекту. Працює над методами розпізнавання.</rdfs:comment>
+        <rdfs:label>Надія Кміта</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Oleksiy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Oleksiy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Hannah"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Roman"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Cabinet_of_Ministers"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Bachelor</lab-1-rodicheva:degree>
+        <rdfs:comment xml:lang="en">Member of the Comfort political party. He has a scandal about plagiarism in his scientific work. Has extensive experience in the field of legislation.</rdfs:comment>
+        <rdfs:comment xml:lang="uk">Депутат від партії Комфорт. Має скандал з приводу плагіата в своїй науковій роботі. Має багатий досвід у галузі законодавства.</rdfs:comment>
+        <rdfs:label>Олексій Тепленко</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#President -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#President">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:canChange rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Cabinet_of_Ministers"/>
+        <lab-1-rodicheva:canChange rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraibe__On_citizens_appeals"/>
+        <lab-1-rodicheva:canChange rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Ensuring_Rights_and_Freedoms_of_Citizens_and_Legal_Regime_in_Temporarily_Occupied_Territory_of_Ukraine"/>
+        <lab-1-rodicheva:canChange rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine__On_access_to_public_information"/>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Volodymyr"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_the_Judicial_System_and_Status_of_Judges"/>
+        <rdfs:label>Президент</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulationsProvidingInformationAboutAccident -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulationsProvidingInformationAboutAccident">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Regulation"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Регламент надання інформації про аварію</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Roman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Roman">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <lab-1-rodicheva:isCoworker rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Oleksiy"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#MP"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Bachelor</lab-1-rodicheva:degree>
+        <rdfs:label>Роман Таран</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SE_UkrNDNC -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SE_UkrNDNC">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Scientist"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Secretary"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Daryna"/>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Lidia"/>
+        <lab-1-rodicheva:hasMember rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Nadiya"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#GSTU32.001-94"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#GSTU34.013-96"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#DSTU1.5:2015"/>
+        <lab-1-rodicheva:isAuthorOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#DSTU_ISO/IEC_12207:2016"/>
+        <rdfs:label>Державне підприємство «Український науково-дослідний і навчальний центр проблем стандартизації, сертифікації та якості»</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SafetyAndHygieneAtWorkDuringOpenPitMiningOperations -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SafetyAndHygieneAtWorkDuringOpenPitMiningOperations">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#CodeOfPractice"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Безпека та гігієна праці під час розробки родовищ відкритим способом</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Svitlana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Svitlana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#MP"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">63</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Bachelor</lab-1-rodicheva:degree>
+        <rdfs:label>Світлана Чала</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TU_U_01.1-00952120.001-2005 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TU_U_01.1-00952120.001-2005">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ClosedSpecification"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalSpecification"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>ТУ У 01.1-00952120.001-2005 Просо подрібнене</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TU_U_15.8-24372924.016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TU_U_15.8-24372924.016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ClosedSpecification"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalSpecification"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>ТУ У 15.8-24372924.016 Стрічка колюча</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#The_LawOfUkraine_On_Amendments_to_the_Commercial_Procedure_Code_of_Ukraine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#The_LawOfUkraine_On_Amendments_to_the_Commercial_Procedure_Code_of_Ukraine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitutional_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Reforming_Law"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#modifies"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#MP"/>
+        <lab-1-rodicheva:modifies rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#LawOfUkraine_On_Ensuring_Rights_and_Freedoms_of_Citizens_and_Legal_Regime_in_Temporarily_Occupied_Territory_of_Ukraine"/>
+        <lab-1-rodicheva:amendmentType>correction</lab-1-rodicheva:amendmentType>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Закон України Про внесення змін до Господарського процесуального кодексу України</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Volodymyr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Volodymyr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Lawyer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Person"/>
+        <lab-1-rodicheva:isMemberOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#President"/>
+        <lab-1-rodicheva:age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">56</lab-1-rodicheva:age>
+        <lab-1-rodicheva:degree>Master</lab-1-rodicheva:degree>
+        <rdfs:label>Володимир Сірко</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#classifierOfProfessions -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#classifierOfProfessions">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StateClassifier"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Класифікатор професій</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#DSTU1.5:2015 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#DSTU1.5:2015">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StateStandard"/>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SE_UkrNDNC"/>
+        <lab-1-rodicheva:isAvailableOnline rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isAvailableOnline>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <lab-1-rodicheva:link>http://online.budstandart.com/ua/catalog/doc-page?id_doc=63938</lab-1-rodicheva:link>
+        <rdfs:label>ДСТУ 1.5:2015 Національна стандартизація. Правила розроблення, викладання та оформлення національних нормативних документів</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#DSTU_ISO/IEC_12207:2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#DSTU_ISO/IEC_12207:2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StateStandard"/>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#SE_UkrNDNC"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>ДСТУ ISO/IEC 12207:2016 Інженерія систем і програмного забезпечення. Процеси життєвого циклу програмного забезпечення</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO/TC_207 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO/TC_207">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#InternationalStandard"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:hasAuthor rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO_SCC"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>ISO/TC 207 Екологічне управління</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO/IEC_JTC_1/SC_22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#ISO/IEC_JTC_1/SC_22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#InternationalStandard"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+        <rdf:type>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                        <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdf:type>
+        <lab-1-rodicheva:isAvailableOnline rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isAvailableOnline>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</lab-1-rodicheva:isReadOpen>
+        <lab-1-rodicheva:link>https://www.iso.org/committee/45202.html</lab-1-rodicheva:link>
+        <rdfs:label>ISO/IEC JTC 1/SC 22 Мови програмування, їхні середовища та інтерфейси системного програмного забезпечення</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Subways.Part1:Design -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Subways.Part1:Design">
+        <rdf:type rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#CodeOfPractice"/>
+        <lab-1-rodicheva:isInternational rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isInternational>
+        <lab-1-rodicheva:isReadOpen rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</lab-1-rodicheva:isReadOpen>
+        <rdfs:label>Метрополітени. Частина 1. Проєктування</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+        <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Scientist"/>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Secretary"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Restriction>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType"/>
+                <owl:hasValue>correction</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType"/>
+                <owl:hasValue>correction</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Correction"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType"/>
+                <owl:hasValue>correction</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType"/>
+                <owl:hasValue>correction</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#InternationalStandard"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalCommittee"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isInternational"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Author"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Authority"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">10</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Deputee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Administrative_Law"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Civil_Law"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Constitutional_Law"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#CodeOfPractice"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Law"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Regulation"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StandardDocument"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#StateClassifier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#TechnicalSpecification"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/amendment">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/author">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/modified">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/doc">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/person">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/job">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>select_amendment</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#RegulatoryDocument"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>find_authors_of_changes</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/amendment"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/author"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#modifies"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/amendment"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/modified"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/amendment"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/author"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/modified"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>find_doc_authors</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/doc"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/author"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/author"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/person"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/doc"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/author"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/person"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>who_can_change</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasAuthor"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/author"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#modifies"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#canChange"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/author"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>job_by_coworker</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/job"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isCoworker"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/job"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue2"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>find_position_by_coworker</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#hasMember"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/job"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isCoworker"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/job"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue1"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/colegue2"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>get_modifiers</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#modifies"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>what_is_amendment</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#amendmentType"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#Amendment"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>is_available_online</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isReadOpen"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#link"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isAvailableOnline"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>select_available_online</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#isReadOpen"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#link"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#link"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment></rdfs:comment>
+        <rdfs:label>get_doc_and_link</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva#link"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                        <swrl:builtin rdf:resource="http://sqwrl.stanford.edu/ontologies/built-ins/3.4/sqwrl.owl#select"/>
+                        <swrl:arguments rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/x"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/darynarodicheva/ontologies/2023/4/lab-1-rodicheva/y"/>
+                        </swrl:arguments>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
+
