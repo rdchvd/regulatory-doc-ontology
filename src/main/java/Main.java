@@ -73,7 +73,7 @@ public class Main {
                 documentInstance = new RegulatoryDocument(model, id, docType, label, name);
             } catch (Exception e) {
                 System.out.println("Could not parse one of the title page elements: ");
-                System.out.println(e.toString());
+                System.out.println(e);
             }
 
         } else {
@@ -98,9 +98,9 @@ public class Main {
         return parts[0];
     }
 
-    private static void addDataToDocumentFromSite(SiteReader siteReader, RegulatoryDocument doc){
+    private static void addDataToDocumentFromSite(SiteReader siteReader, RegulatoryDocument doc) {
         String docLink = siteReader.findDocLink(doc.getName(), doc.getId());
-        if (docLink!= null){
+        if (docLink != null) {
             doc.setAvailableOnline(true);
             doc.setLink(docLink);
         }
@@ -199,25 +199,120 @@ public class Main {
     }
 
 
+    public static List<String> findMatchingSubstrings(String input, String phrase1, String phrase2) {
+        List<String> matchingSubstrings = new ArrayList<>();
+
+        String regex = "(?i).*" + Pattern.quote(phrase1) + ".*" + Pattern.quote(phrase2) + ".*";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(input);
+
+        while (matcher.find()) {
+            matchingSubstrings.add(matcher.group());
+        }
+
+        return matchingSubstrings;
+    }
+
+    private static List<String> extractDocIdentifierForProperty(String match) {
+        String[] parts = match.split("\\s", 3);
+        return extractNumbers(parts[2]);
+    }
+
+    private static List<String> extractNumbers(String line) {
+        List<String> numbers = new ArrayList<>();
+
+        Pattern pattern = Pattern.compile("\\b\\d+(?:\\.\\d+)?\\b");
+
+        Matcher matcher = pattern.matcher(line);
+        while (matcher.find()) {
+            String number = matcher.group();
+            numbers.add(number);
+        }
+
+        return numbers;
+    }
+
+    public static List<DataPropertyDocRuleCreator> findNewDataProperties(
+            String docText, List<RegulatoryDocument> referenceDocumentInstances, RegulatoryDocument mainDocument
+    ) {
+
+        List<String> matchingLines = findMatchingSubstrings(docText, "Вд", "Згідно з");
+        List<DataPropertyDocRuleCreator> dataPropertyRules = new ArrayList<>();
+
+        for (String line : matchingLines) {
+
+            String[] parts = line.replace("Вд1", "").split("\t|\t");
+            String property = parts[0];
+            String value = parts[2];
+            List<String> docIds = extractDocIdentifierForProperty(parts[4]);
+            List<Individual> docIndividuals = new ArrayList<>();
+
+            for (String docId : docIds) {
+                for (RegulatoryDocument doc : referenceDocumentInstances) {
+                    if (docId.length() >= 4 && doc.getId().contains(docId) && doc.individualInstance != null )
+                    {
+                        if (!docIndividuals.contains(doc.individualInstance))
+                            docIndividuals.add(doc.individualInstance);
+
+                    }
+                }
+            }
+            docIndividuals.add(mainDocument.individualInstance);
+
+            for (Individual doc : docIndividuals) {
+                System.out.println("Adding `" + property + "` to individual " + doc);
+                dataPropertyRules.add(new DataPropertyDocRuleCreator(doc, property, value));
+            }
+
+
+        }
+        return dataPropertyRules;
+    }
+
+    public static void clean(
+            OntModel model,
+            List<Individual> deputies,
+            List<Individual> authorities,
+            List<RegulatoryDocument> referenceDocumentInstances,
+            RegulatoryDocument mainDocument
+    ) {
+        for (Individual deputy : deputies) {
+            OntologyHelper.removeIndividual(model, deputy);
+        }
+
+        for (Individual authority : authorities) {
+            OntologyHelper.removeIndividual(model, authority);
+        }
+        for (RegulatoryDocument doc : referenceDocumentInstances) {
+            OntologyHelper.removeIndividual(model, doc.individualInstance);
+        }
+        OntologyHelper.removeIndividual(model, mainDocument.individualInstance);
+    }
+
 
     public static void main(String[] args) {
+        System.out.println("Creating and loading ontology...");
         OntModel model = OntologyHelper.createOntology();
 
         OntologyHelper.loadOntologyFromFile(model, ontologyFile);
 
+        System.out.println("Parsing docx file in string...");
         String docText = getRegulatoryDocumentTextFromDocx();
-        System.out.println(docText);
 
+        System.out.println("Getting data about document references...");
         List<RegulatoryDocument> referenceDocumentInstances = createRegulatoryDocumentsFromReferences(model, docText);
 
-
-        for (RegulatoryDocument doc: referenceDocumentInstances) {
+        System.out.println("Adding references to ontology...");
+        for (RegulatoryDocument doc : referenceDocumentInstances) {
             doc.setIndustry("Харчові продукти");
             doc.addToOntology();
         }
 
+        System.out.println("Getting data about document itself...");
         RegulatoryDocument mainDocument = createRegulatoryDocumentsFromTitlePage(model, docText);
 
+        System.out.println("Getting data about authors...");
         List<String> authors = getAuthorsFromForeword(docText);
         List<String> people = getPeopleFromForeword(docText);
         assert authors != null;
@@ -226,6 +321,7 @@ public class Main {
         List<Individual> authorities = new ArrayList<>();
         List<Individual> deputies = new ArrayList<>();
 
+        System.out.println("Creating authors in ontology...");
         for (String author : authors) {
             authorities.add(OntologyHelper.createIndividual(model, OntologyHelper.getClassByName(model, "Authority"), author));
         }
@@ -233,20 +329,38 @@ public class Main {
             deputies.add(OntologyHelper.createIndividual(model, OntologyHelper.getClassByName(model, "Deputee"), person));
         }
 
+        System.out.println("Making up a `hasMember` relation between authors and people individuals...");
         for (Individual authority : authorities) {
             for (Individual deputy : deputies) {
                 OntologyHelper.addObjectPropertyValue(model, authority, "hasMember", deputy);
             }
         }
+
+        System.out.println("Getting additional data about document from file...");
         mainDocument.setAnnotation(parseAnnotation(docText));
         mainDocument.setIndustry("Харчові продукти");
         mainDocument.setAuthors(authorities);
 
+        System.out.println("Getting additional data about document from online source...");
         mainDocument.getDataFromOnline();
+
+        System.out.println("Adding main document to ontology...");
         mainDocument.addToOntology();
 
+        System.out.println("Adding data properties from tables...");
+        List<DataPropertyDocRuleCreator> dataProperties = findNewDataProperties(
+                docText, referenceDocumentInstances, mainDocument
+        );
+
+        for (DataPropertyDocRuleCreator property : dataProperties) {
+            property.getOrCreateProperty(model);
+            property.addPropertyToIndividual(model);
+        }
+
+        System.out.println("Saving changes...");
         OntologyHelper.save(model);
 
-
+        OntologyHelper.printIndividualInfo(model, "ДСТУ_6003:2008");
+//        clean(model, deputies, authorities, referenceDocumentInstances, mainDocument);
     }
 }

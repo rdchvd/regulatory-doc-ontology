@@ -5,14 +5,13 @@ import org.apache.jena.rdf.model.ResourceFactory;
 
 import java.text.ParsePosition;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class RegulatoryDocument {
     private final String id;
     private final String docType;
+    public OntClass classInOntology;
+    public Individual individualInstance;
     private String industry;
     private String edition;
     private Date createdAt;
@@ -20,14 +19,11 @@ public class RegulatoryDocument {
     private Date renewedAt;
     private boolean isAvailableOnline;
     private boolean isInternational;
-    private String label;
+    private final String label;
     private String name;
     private OntModel model;
     private String link;
     private String annotation;
-
-    public OntClass classInOntology;
-    public Individual individualInstance;
     private List<Individual> authors;
 
 
@@ -43,6 +39,7 @@ public class RegulatoryDocument {
     public RegulatoryDocument(OntModel model, String id, String docType, String label, String industry, String edition,
                               Date createdAt, Date implementedAt, Date renewedAt,
                               boolean isAvailableOnline, boolean isInternational) {
+        this.model = model;
         this.id = id;
         this.docType = docType;
         this.label = label;
@@ -60,104 +57,28 @@ public class RegulatoryDocument {
         return id;
     }
 
-    public String getIndustry() {
-        return industry;
-    }
-
     public void setIndustry(String industry) {
         this.industry = industry;
-    }
-
-    public String getEdition() {
-        return edition;
     }
 
     public void setAnnotation(String annotation) {
         this.annotation = annotation;
     }
 
-    public String getAnnotation() {
-        return annotation;
-    }
-
-    public void setEdition(String edition) {
-        this.edition = edition;
-    }
-
-    public Date getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Date createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public Date getImplementedAt() {
-        return implementedAt;
-    }
-
-    public void setImplementedAt(Date implementedAt) {
-        this.implementedAt = implementedAt;
-    }
-
-    public Date getRenewedAt() {
-        return renewedAt;
-    }
-
-    public void setRenewedAt(Date renewedAt) {
-        this.renewedAt = renewedAt;
-    }
-
     public void setLink(String link) {
         this.link = link;
-    }
-
-    public boolean isAvailableOnline() {
-        return isAvailableOnline;
     }
 
     public void setAvailableOnline(boolean availableOnline) {
         isAvailableOnline = availableOnline;
     }
 
-    public boolean isInternational() {
-        return isInternational;
-    }
-
-    public void setInternational(boolean international) {
-        isInternational = international;
-    }
-
-    public String getDocType() {
-        return docType;
-    }
-
-    public String getLabel() {
-        return label;
-    }
-
     public String getName() {
         return name;
     }
 
-    public String getLink() {
-        return link;
-    }
-
-    public void setLabel(String label) {
-        this.label = label;
-    }
-
     public void setAuthors(List<Individual> authors) {
         this.authors = authors;
-    }
-
-    public List<Individual> getAuthors() {
-        return this.authors;
-    }
-
-    public void print() {
-        System.out.println(this.label);
     }
 
     public void setClassByType() {
@@ -170,12 +91,13 @@ public class RegulatoryDocument {
 
         String className = String.valueOf(documentTypes.get(this.docType));
         this.classInOntology = OntologyHelper.getClassByName(this.model, className);
+        this.isInternational = Objects.equals(className, "InternationalStandard");
     }
 
     public void getDataFromOnline() {
         SiteReader siteReader = new SiteReader();
         this.link = siteReader.findDocLink(this.name, this.id);
-        if (this.link!=null)
+        if (this.link != null)
             this.isAvailableOnline = true;
 
         siteReader.read(this.link);
@@ -200,10 +122,17 @@ public class RegulatoryDocument {
 
     public void addAuthorsToOntology() {
         for (Individual author : this.authors) {
-            System.out.println("Adding " + author.getURI() + " to " + this.individualInstance.getURI());
             OntologyHelper.addObjectPropertyValue(model, this.individualInstance, "hasAuthor", author);
         }
 
+    }
+
+    public void addIndustryToOntology() {
+        if (this.industry != null) {
+            OntClass classInstance = OntologyHelper.getClassByName(model, "Industry");
+            Individual industryInstance = OntologyHelper.getOrCreateIndividual(model, classInstance, this.industry);
+            OntologyHelper.addObjectPropertyValue(model, this.individualInstance, "hasIndustry", industryInstance);
+        }
     }
 
 
@@ -222,22 +151,10 @@ public class RegulatoryDocument {
             OntologyHelper.addDataPropertyValue(
                     model, this.individualInstance, "id", ResourceFactory.createStringLiteral(this.id)
             );
-            OntologyHelper.getDataPropertyUsage(model, model.getDatatypeProperty(Configuration.ONTOLOGY_URI + "id"));
-
         }
-        if (this.industry != null) {
-            OntologyHelper.addDataPropertyValue(
-                    model, this.individualInstance, "id", ResourceFactory.createStringLiteral(this.id)
-            );
-            OntologyHelper.getDataPropertyUsage(model, model.getDatatypeProperty(Configuration.ONTOLOGY_URI + "id"));
+        if (this.industry != null)
+            addIndustryToOntology();
 
-        }
-
-        if (this.industry != null) {
-            OntologyHelper.addDataPropertyValue(
-                    model, this.individualInstance, "industry", ResourceFactory.createStringLiteral(this.industry)
-            );
-        }
 
         if (this.edition != null) {
             OntologyHelper.addDataPropertyValue(
@@ -265,23 +182,24 @@ public class RegulatoryDocument {
             );
         }
 
-        if (!this.isAvailableOnline) {
+        if (!this.isAvailableOnline)
             this.isAvailableOnline = false;
-        }
+
         OntologyHelper.addDataPropertyValue(
                 model, this.individualInstance, "isAvailableOnline", ResourceFactory.createTypedLiteral(this.isAvailableOnline)
         );
 
-        if (!this.isInternational) {
-            this.isInternational = false;
+        if (this.isInternational) {
+            OntologyHelper.addDataPropertyValue(
+                    model, this.individualInstance, "isInternational", ResourceFactory.createTypedLiteral(this.isInternational)
+            );
         }
-        OntologyHelper.addDataPropertyValue(
-                model, this.individualInstance, "isInternational", ResourceFactory.createTypedLiteral(this.isInternational)
-        );
 
         if (this.authors != null) {
             addAuthorsToOntology();
         }
+
+
 
 
     }

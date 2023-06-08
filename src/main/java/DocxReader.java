@@ -1,5 +1,4 @@
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFParagraph;
+import org.apache.poi.xwpf.usermodel.*;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,6 +16,20 @@ public class DocxReader {
             for (XWPFParagraph paragraph : paragraphs) {
                 String text = paragraph.getText();
                 textBuilder.append(text).append("\n");
+            }
+
+            List<XWPFTable> tables = document.getTables();
+
+            for (XWPFTable table : tables) {
+                List<XWPFTableRow> rows = table.getRows();
+                for (XWPFTableRow row : rows) {
+                    List<XWPFTableCell> cells = row.getTableCells();
+                    for (XWPFTableCell cell : cells) {
+                        String text = cell.getText();
+                        textBuilder.append(text).append("\t|\t");
+                    }
+                    textBuilder.append("\n");
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

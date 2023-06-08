@@ -12,7 +12,7 @@ public class SiteReader {
     private static final String driverPath = Configuration.CHROME_DRIVER_PATH;
     private static WebDriver driver;
 
-    public SiteReader(){
+    public SiteReader() {
 
         System.setProperty("webdriver.chrome.driver", driverPath);
 
@@ -23,7 +23,7 @@ public class SiteReader {
 
     }
 
-    public void makeSearch(String searchTerm){
+    public void makeSearch(String searchTerm) {
         WebElement searchInput;
         try {
             searchInput = driver.findElement(By.id("entertop"));
@@ -31,7 +31,6 @@ public class SiteReader {
             searchInput = driver.findElement(By.id("enter"));
         }
 
-        // Enter your search term
         searchInput.sendKeys(searchTerm);
 
         // Find the "Знайти документ" button and click it
@@ -39,9 +38,9 @@ public class SiteReader {
         searchButton.click();
 
     }
-    public List<String> searchThroughDocs(String identifier){
-        List<String> docLinks = new ArrayList<>();
 
+    public List<String> searchThroughDocs(String identifier) {
+        List<String> docLinks = new ArrayList<>();
 
         // Find all <a> elements containing the specified text
         String xpathExpression = String.format("//a[contains(text(), '%s')]", identifier);
@@ -55,20 +54,20 @@ public class SiteReader {
 
     }
 
-    public String findDocLink(String docName, String identifier){
+    public String findDocLink(String docName, String identifier) {
         read(Configuration.DOC_ONLINE_DB_SITE);
         makeSearch(docName);
 
         List<String> docLinks = searchThroughDocs(docName);
 
-        if (docLinks.size() == 0 && identifier != null){
+        if (docLinks.size() == 0 && identifier != null) {
             docLinks = searchThroughDocs(identifier);
         }
 
         return docLinks.isEmpty() ? null : docLinks.get(0);
     }
 
-    public String findInTableByTitle(String title){
+    public String findInTableByTitle(String title) {
         String xpathExpression = String.format("//tr[@class='tr_light' and td[contains(text(), '%s')]]", title);
         WebElement rowElement = driver.findElement(By.xpath(xpathExpression));
 
